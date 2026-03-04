@@ -16,7 +16,7 @@ const student = {
         console.log("Hi, ",this.fullname());
     },
 };
-// console.log("Student",student);
-// console.log(student);
-// console.log(student.scores.math);
+console.log("Student",student);
+console.log(student);
+console.log(student.scores.math);
 console.log(student.fullname());
