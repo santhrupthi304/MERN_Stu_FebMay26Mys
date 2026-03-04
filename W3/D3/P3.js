@@ -1,11 +1,11 @@
 // Break
 
-// for(let i=0;i<5;i++){        
-//     if(i===4){
-//         console.log("i",i);
-//         break;
-//     }
-// }
+for(let i=0;i<5;i++){        
+    if(i===4){
+        console.log("i",i);
+        break;
+    }
+}
 
 // Continue
 for(let i=0;i<5;i++){        
