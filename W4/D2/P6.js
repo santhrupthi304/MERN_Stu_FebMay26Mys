@@ -10,7 +10,7 @@ livePassword.addEventListener("input",function(){
         livePassword.focus();
         return;
     }
-    //check length of the password
+    //check length of the password 
     if(password.length < 8){
         message.textContent = "Password must be atleast 8 characters long.";
         message.style.color = "red";
