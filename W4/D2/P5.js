@@ -20,7 +20,7 @@ signupForm.addEventListener("submit",function(event){
         return;
     }
 
-    //Password validation
+    //Password validation 
     const password = signupPassword.value;
     console.log(signupForm.nextElementSibling.signupPassword.value);
     if(!password){
