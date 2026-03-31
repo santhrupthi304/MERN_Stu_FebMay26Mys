@@ -1,4 +1,5 @@
 // Built-in Middleware
+
 const express = require("express")
 
 const app = express();
@@ -17,7 +18,7 @@ app.post("/api/users",function(req,res){
 });
 
 app.post("/form",function(req,res){
-    res.json({application
+    res.json({
         success:true,
         formData: req.body
     });
