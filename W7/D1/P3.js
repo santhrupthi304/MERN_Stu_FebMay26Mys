@@ -13,6 +13,7 @@ app.get("/users",function(req,res){
     res.send("Returning all users");
 });
 
+
 //To create
 app.post("/users",function(req,res){
     //res.status() sets the HTTP status code before sending the response body
