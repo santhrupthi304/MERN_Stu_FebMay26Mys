@@ -4,6 +4,12 @@ const express = require("express");
 const app = express();
 
 app.get("/users",function(req,res){
+    res.status(200).json([
+        {message:"success"},
+        {id:1,name:"Sonu"},
+        {id:2,name:"Santhu"},
+        {id:3,name:"Pinku"},]
+    );
     res.send("Returning all users");
 });
 
