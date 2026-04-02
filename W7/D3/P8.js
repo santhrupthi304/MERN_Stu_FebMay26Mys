@@ -1,4 +1,4 @@
-// JWT flow with login, refresh style logic ans secure verification
+// JWT flow with login, refresh style logic and secure verification
 
 const express = require("express");
 const jwt = require("jsonwebtoken");
@@ -111,5 +111,6 @@ app.get("/me",authenticateAccessToken,function(req,res){
 app.listen(4000,function(){
     console.log("JWT demo server running @ http://localhost:4000");
 });
+
 
 //curl -X POST http://localhost:4000/login -H "Content-Type:application/json" -d "{\"email\":\"email@email.com\",\"password\":\"pass@123\"}"
