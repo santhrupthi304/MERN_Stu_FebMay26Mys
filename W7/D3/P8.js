@@ -115,3 +115,4 @@ app.listen(4000,function(){
 
 //curl -X POST http://localhost:4000/login -H "Content-Type:application/json" -d "{\"email\":\"email@email.com\",\"password\":\"pass@123\"}"
 //curl -X POST http://localhost:4000/login -H "Content-Type:application/json" -d "{\"refreshToken\":\"refresh token link\"}"
+// curl http://localhost:4000/me -H "Authorization:Bearer accessTokenlink"
