@@ -3,6 +3,6 @@
 const EventEmitter = require("events");
 
 //Custom EventEmitter object
-const eventEmitter = new EventEmitter();
+const bookingEmitter = new EventEmitter();
 
 module.exports = bookingEmitter;
