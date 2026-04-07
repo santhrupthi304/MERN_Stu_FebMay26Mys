@@ -1,6 +1,4 @@
 // Writing and reading bookings and its logs
-const { rejects } = require('assert');
-const { resolve } = require('dns');
 const fs = require('fs');
 const path = require('path');
 
