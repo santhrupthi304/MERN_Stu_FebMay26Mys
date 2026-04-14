@@ -5,7 +5,7 @@ const courses = require('./courses');
 const user = require('./user');
 const enroll = require('./enroll');
 const completeLesson = require('./progress');
-// const withdraw = require('./withdraw');
+const withdraw = require('./withdraw');
 const { validateChoice } = require('./validator');
 const emitter = require('./events');
 const { displayCourses } = require('./utils');
@@ -41,6 +41,7 @@ function menu() {
     rl.question("Choose option: ", (input) => {
         validateChoice(input, async (err, choice) => {
             if (err) return console.log(chalk.red(err));
+            
             switch (choice) {
                 case 1:
                     displayCourses(courses);
@@ -84,6 +85,7 @@ function menu() {
 
                 case 6:
                     rl.close();
+                    console.log("GoodBye....")
                     return;
 
                 default:
