@@ -1,5 +1,5 @@
 // Pre-save and post-save hooks
-const mongoose = required("mongoose");
+const mongoose = require("mongoose");
 
 async function runSaveHookDemo(){
     try{
