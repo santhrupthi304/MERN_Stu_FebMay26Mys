@@ -1,26 +1,60 @@
-const user = require('./user');
-const emitter = require('./events');
+// Progress tracking module
 
-async function completeLesson(courseId, lessonIndex) {
-  try {
-    const course = user.enrolledCourses[courseId];
+// Mark lesson as completed
+function completeLesson(enrolledCourses, userName, courseId, lessonName) {
+    return new Promise((resolve, reject) => {
 
-    if (!course) throw "Not enrolled in this course";
+        // Find enrolled course
+        const course = enrolledCourses.find(
+            c => c.user === userName && c.id === courseId
+        );
 
-    if (course.completedLessons.includes(lessonIndex)) {
-      throw "Lesson already completed";
-    }
+        if (!course) {
+            return reject("You are not enrolled in this course");
+        }
 
-    course.completedLessons.push(lessonIndex);
+        // Check if lesson exists in course
+        if (!course.totalLessons) {
+            return reject("Invalid course data");
+        }
 
-    const progress = (course.completedLessons.length / course.lessons.length) * 100;
+        // Prevent duplicate lesson completion
+        if (course.completed.includes(lessonName)) {
+            return reject("Lesson already completed");
+        }
 
-    emitter.emit("lessonCompleted", course.title);
+        // Add lesson
+        course.completed.push(lessonName);
 
-    return progress.toFixed(2);
-  } catch (err) {
-    throw err;
-  }
+        resolve(`Lesson "${lessonName}" marked as completed`);
+    });
 }
 
-module.exports = completeLesson;
+
+// Calculate progress %
+function calculateProgress(course) {
+    const completed = course.completed.length;
+    const total = course.totalLessons;
+
+    return ((completed / total) * 100).toFixed(2);
+}
+
+
+// Get progress summary for a user
+function getProgress(enrolledCourses, userName) {
+
+    const userCourses = enrolledCourses.filter(c => c.user === userName);
+
+    return userCourses.map(course => ({
+        title: course.title,
+        completedLessons: course.completed,
+        pendingLessons: course.totalLessons - course.completed.length,
+        progress: calculateProgress(course) + "%"
+    }));
+}
+
+module.exports = {
+    completeLesson,
+    calculateProgress,
+    getProgress
+};

@@ -1,18 +1,36 @@
-const user = require('./user');
-const emitter = require('./events');
+//withdra file is using to withdraw the course
+const emitter = require('../events/events');
+const chalk = require('chalk');
 
-function withdraw(courseId){
-    if(!user.enrolledCourses[courseId]){
-        return "Not enrolled";
-    }
+// Withdraw from a course
+function withdrawCourse(enrolledCourses, userName, courseId) {
+    return new Promise((resolve, reject) => {
 
-    const title = user.enrolledCourses[courseId].title;
+        // Find the course
+        const courseIndex = enrolledCourses.findIndex(
+            c => c.user === userName && c.id === courseId
+        );
 
-    delete user.enrolledCourses[courseId];
+        //  If not enrolled
+        if (courseIndex === -1) {
+            const msg = chalk.red("You are not enrolled in this course");
+            // emitter.emit("operationFailed", msg);
+            return reject(msg);
+        }
 
-    emitter.emit("courseWithdrawn",title);
+        //  Remove course
+        const removedCourse = enrolledCourses.splice(courseIndex, 1)[0];
 
-    return"Withdrawn successfully";
+        // Success message
+        const successMsg = chalk.green(
+            `You have withdrawn from ${removedCourse.title}`
+        );
+
+        // Emit success event
+        // emitter.emit("courseWithdrawn", successMsg);
+
+        resolve(successMsg);
+    });
 }
 
-module.exports = withdraw;
+module.exports = withdrawCourse;
