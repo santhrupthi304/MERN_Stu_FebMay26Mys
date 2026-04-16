@@ -1,4 +1,4 @@
-const emitter = require('../events/events');
+const emitter = require('./events');
 
 
 let enrolledCourses = [];

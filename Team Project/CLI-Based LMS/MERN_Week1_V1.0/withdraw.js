@@ -1,5 +1,5 @@
 //withdra file is using to withdraw the course
-const emitter = require('../events/events');
+const emitter = require('./events');
 const chalk = require('chalk');
 
 // Withdraw from a course

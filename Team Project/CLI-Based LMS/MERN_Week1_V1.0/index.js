@@ -1,11 +1,11 @@
 const readline = require('readline');
 const chalk = require('chalk');
 
-const courses = require('./data/courses');
-const { enrollCourse, enrolledCourses, getUserEnrollments } = require('./modules/enroll');
-const { completeLesson, getProgress } = require('./modules/progress');
-const withdrawCourse = require('./modules/withdraw');
-const { validateCourseId, validateLesson, validateMenuChoice } = require('./modules/validator');
+const courses = require('./courses');
+const { enrollCourse, enrolledCourses, getUserEnrollments } = require('./enroll');
+const { completeLesson, getProgress } = require('./progress');
+const withdrawCourse = require('./withdraw');
+const { validateCourseId, validateLesson, validateMenuChoice } = require('./validator');
 
 // CLI setup
 const rl = readline.createInterface({
