@@ -42,3 +42,4 @@ async function main() {
         console.log("Disconnected from DB.")
     }
 }
+main();
