@@ -24,6 +24,13 @@
 
             <h1 class="text-5xl mb-6">Santhrupthi S</h1>
 
+            <!-- GREETING -->
+            <p id="greeting" class="text-lg text-gray-500 mb-2"></p>
+            <!-- TYPING -->
+            <p class="text-2xl font-bold mb-6">
+                I am a <span id="typing-text" class="text-blue-600"></span>
+            </p>
+
             <p class="text-xl lg:text-2xl text-slate-600 font-bold mb-10 max-w-md mx-auto lg:mx-0">
                 Full-Stack developer | MERN enthusiast | Competitive Programmer
             </p>
@@ -31,11 +38,18 @@
             <div
                 class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start mb-8">
 
-                <a href="#projects" class="bg-red-400 hover:bg-green-500 px-10 py-4 rounded shadow-xl">
+                <!-- GEOLOCATION -->
+                <button onclick="initGeolocation()"
+                    class="bg-purple-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg transition duration-300">
+                    Detect My Location
+                </button>
+                <p id="message" class="mt-4 text-gray-700"></p>
+            
+                <a href="My Project.pptx" class="bg-red-500 hover:bg-green-500 px-10 py-4 rounded shadow-xl">
                     View Projects
                 </a>
 
-                <a href="#resume" class="bg-blue-400 hover:bg-green-500 px-10 py-4 rounded shadow-xl">
+                <a href="Santhrupthi S resume.pdf" class="bg-blue-500 hover:bg-green-500 px-10 py-4 rounded shadow-xl">
                     Download Resume
                 </a>
 
@@ -43,9 +57,9 @@
 
             <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-sm font-bold">
 
-                <span>800+ Github commits</span>
+                <span>400+ Github commits</span>
                 <span>100 LeetCode Questions Solved</span>
-                <span>5 live projects completed</span>
+                <span>4 live projects completed</span>
 
             </div>
 
@@ -53,7 +67,7 @@
 
         <div class="order-1 lg:order-2 w-full lg:w-96 max-w-sm mx-auto lg:mx-0">
 
-            <img src="assets/images/img.jpg" alt="My photo"
+            <img src="My photo.jpg" alt="My photo"
                 class="aspect-square w-full rounded shadow-lg mx-auto lg:mx-0 hover:ring-blue-500 transition-all duration-300 hover:scale-[1.02]"
                 loading="lazy">
 
@@ -140,12 +154,74 @@
                 Education and Experience
             </h2>
 
-            <!-- existing experience cards remain unchanged -->
-
+            <div class="space-y-8">
+                <!-- Card 1 -->
+                <div class="group shadow-2xl rounded-3xl p-8
+                 hover: shadow-4xl transition-all relative overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-400 opacity-0
+                 group-hover: opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center 
+                 lg:justify-between gap-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-emarald-400 rounded
+                    flex items-center shadow-2xl">
+                                <span class="text-white font-bold ">VTU</span>
+                            </div>
+                            <div class="font-semibold text-4xl">
+                                B.E in Computer Science(2026)
+                            </div>
+                            <p class="text-md font-semibold">CIT Mandya</p>
+                            <p class="text-md font-semibold text-right">CGPA: 7.7</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group shadow-2xl rounded-3xl p-8
+                 hover: shadow-4xl transition-all relative overflow-hidden">
+                    <div class="absolute inset-0 bg-red-400 opacity-0
+                 group-hover: opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center 
+                 lg:justify-between gap-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-emarald-400 rounded
+                    flex items-center shadow-2xl">
+                                <span class="text-white font-bold ">pre-university</span>
+                            </div>
+                            <div class="font-semibold text-4xl">
+                                PCMB(2022)
+                            </div>
+                            <p class="text-md font-semibold">Anikethan pu college</p>
+                            <p class="text-md font-semibold text-right">60%</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group shadow-2xl rounded-3xl p-8
+                 hover: shadow-4xl transition-all relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-400 opacity-0
+                 group-hover: opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center 
+                 lg:justify-between gap-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-emarald-400 rounded
+                    flex items-center shadow-2xl">
+                                <span class="text-white font-bold ">karnataka state board</span>
+                            </div>
+                            <div class="font-semibold text-4xl">
+                                SSLC(2020)
+                            </div>
+                            <p class="text-md font-semibold">Anikethan High School</p>
+                            <p class="text-md font-semibold text-right">70%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
-
+    
     <!-- SKILLS -->
 
     <section id="skills" class="py-24 px-8 lg:px-16 bg-blue-200">
@@ -227,6 +303,10 @@
     <script src="js/features/contact-validation.js"></script>
     <script src="js/features/theme-toggle.js"></script>
     <script src="js/features/project-filter.js"></script>
+    <script src="js/features/BackToTop.js"></script>
+    <script src="js/features/geolocation.js"></script>
+    <script src="js/features/typing-animation.js"></script>
+    <script src="js/features/project-search.js"></script>
     <script src="js/main.js"></script>
 
 </body>
