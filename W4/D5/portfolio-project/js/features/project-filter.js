@@ -32,14 +32,14 @@ function initProjectFilter(){
         projectsTechnologies.textContent = projects.technologies;
         
         const projectsStatus = document.createElement("p");
-        projectsStatus.className = "text-sm p-1 text-center bg-red-300 rounded-xl shadow-lg";
+        projectsStatus.className = "text-sm p-1 text-center bg-red-300 rounded-xl shadow-lg mt-4";
         projectsStatus.textContent = projects.status;
 
-        const projectsLiveDemo = document.createElement("card");
+        const projectsLiveDemo = document.createElement("button");
         projectsLiveDemo.className = "text-sm p-1 text-center bg-red-500 hover:bg-green-500 rounded shadow-lg justify-start";
         projectsLiveDemo.textContent = projects.liveDemo;
 
-        const projectsGithub = document.createElement("card");
+        const projectsGithub = document.createElement("button");
         projectsGithub.className = "text-sm p-1 text-center bg-purple-300 hover:bg-green-500 rounded shadow-lg justify-start";
         projectsGithub.textContent = projects.github;
 
