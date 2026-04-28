@@ -6,5 +6,7 @@ document.addEventListener("DOMContentLoaded",
         initContactValidation();
         initThemeToggle();
         initProjectFilter();
+        filterProjects();
+        initBackToTop();
     }
 );
