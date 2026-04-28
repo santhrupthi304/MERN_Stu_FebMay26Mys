@@ -119,12 +119,15 @@ import './App.css'
 //   )
 // }
 
-function App() { //js
+function App() { 
+    const user = "Sonu";
+    const marks = 80;
             return (
-                // html (jsx=js+html)
-                <div>  
-                    <h1>React Introduction</h1> 
-                    <p>React simplifies UI creation through reusable components.</p>
+                <div>
+                    {/* Expressions within JSX  */}
+                    {/* { curly brackets }: in JSX means:switch from JSX/HTML-like syntax into JavaScript*/}
+                    <h1>Hello, {user}</h1>
+                    <p>Updated marks: {marks+10}</p>
                 </div>
             );
         }
