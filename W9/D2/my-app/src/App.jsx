@@ -4,7 +4,7 @@ import { FunctionName } from './components/FunctionalCompOne'
 import { FunctionalComponentsBasics } from './components/FunctionalComponentsBasics'
 import { ClassComponentBasics } from './components/ClassComponentsBasics'
 import { FunctionalComp } from './components/FunctionalComponentsAdv'
-
+import { ClassComponentsState } from './components/ClassComponentsState'
 function App() {
   return (
     // Fragment in react: <> </>
@@ -13,7 +13,8 @@ function App() {
      {/* <FunctionName />   */}
     {/* < FunctionalComponentsBasics /> */}
     {/* < ClassComponentBasics/>  */}
-    < FunctionalComp/>
+    {/* < FunctionalComp/> */}
+    < ClassComponentsState/>
     </>
   )
 }
