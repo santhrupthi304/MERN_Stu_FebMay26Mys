@@ -1,13 +1,19 @@
-import { useState } from 'react'
 import './App.css'
 import {PropBasics} from './components/P1'
-
+import { PropDestructuring } from './components/P2'
+import { PropsChildren } from './components/P3'
+import { PropDrillingDemo} from './components/P4'
+import {SharedStateParent} from './components/P5'
+import { CompositionDemo } from './components/P6'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    < PropBasics/>
+    {/* < PropBasics/> */}
+    {/* <PropDestructuring/> */}
+    {/* <PropsChildren/> */}
+    {/* <PropDrillingDemo/> */}
+    {/* <SharedStateParent/> */}
+    <CompositionDemo/>
     </>
   )
 }
