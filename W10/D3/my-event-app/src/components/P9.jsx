@@ -30,7 +30,7 @@ export function EventObj() {
     };
     return(
         <section onClick={handleParentClick}
-        style={{padding: '20px', backgroundColor:'Yellow',}}
+        style={{padding: '20px', backgroundColor:'gray',}}
         > 
         <h2>Event Object</h2>
 
@@ -38,7 +38,7 @@ export function EventObj() {
         <button onClick={handleSubmit}>Submit form</button>
 
         <div onClick={handleBoxClick}
-        style={{padding:'20px', backgroundColor:'red',}}>
+        style={{padding:'20px', backgroundColor:'lightblue',}}>
             <span  style=
             {{padding:'20px', backgroundColor:'blue',
                 display:'inline-block',
