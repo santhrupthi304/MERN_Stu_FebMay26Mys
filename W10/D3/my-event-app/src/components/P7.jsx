@@ -2,6 +2,7 @@
 // Controlled component
 // A form input whose values is controlled by the React state
 import { useState } from "react";
+
 export function FormsPattern()
 {
     const [name, setName] = useState('');
