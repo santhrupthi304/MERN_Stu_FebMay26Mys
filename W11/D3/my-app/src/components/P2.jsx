@@ -5,7 +5,7 @@
  */
 import { useEffect, useState } from "react";
 
-export function UseEffectLifeCycle() {
+export function eUseEffectLifeCycl() {
     const [count, setCount] = useState(0);
     //1. No dependency array
     useEffect(() => {
